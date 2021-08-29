@@ -1,0 +1,30 @@
+.wrapper{
+    display: flex;
+    align-items: center;
+    height: 70px;
+    background: linear-gradient(to top left, #3c3b52 0%, #252233 80%);
+    padding-left: 10px;
+    color: white;
+    font-weight: 600;
+    font-size: 36px;
+    .logo{
+
+    }
+    .links{
+        font-size: 20px;
+        display: flex;
+        flex-direction: row;
+        justify-content: flex-end;
+        ul{
+            display: flex;
+            flex-direction: row-reverse;
+            li{
+                margin-left: 5px;
+                list-style: none;
+            }
+        }
+    }
+    .burger{
+
+    }
+}
