@@ -1,5 +1,6 @@
 import React from 'react'
 import './navbar.scss';
+import {Link} from 'react-router-dom';
 
 export default function Navbar() {
     return (
@@ -9,7 +10,11 @@ export default function Navbar() {
             <input type="text" className="searchbar" />
             <div className="links">
                 <ul>
-                    <li>Log In</li>
+                    <li>
+                        <Link to="/cart">
+                        Log In
+                        </Link>
+                    </li>
                     <li>Cart</li>
                 </ul>
             </div>

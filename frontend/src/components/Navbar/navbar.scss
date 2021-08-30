@@ -2,22 +2,38 @@
     display: flex;
     align-items: center;
     height: 70px;
+    width: 100%;
     background: linear-gradient(to top left, #3c3b52 0%, #252233 80%);
     padding-left: 10px;
     color: white;
     font-weight: 600;
     font-size: 36px;
+    position: absolute;
+    top: 0;
+    justify-content: space-between;
     .logo{
 
+    }
+    .searchbar{
+        height: 30px;
+        width: 50%;
+        outline: none;
+        appearance: none;
+        border-radius: 3px;
+        border: none;
     }
     .links{
         font-size: 20px;
         display: flex;
         flex-direction: row;
-        justify-content: flex-end;
+        justify-content: center;
+        position: absolute;
+        top: 10;
+        right: 30px;
         ul{
             display: flex;
             flex-direction: row-reverse;
+            margin: 5px;
             li{
                 margin-left: 5px;
                 list-style: none;
