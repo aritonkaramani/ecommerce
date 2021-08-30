@@ -11,14 +11,29 @@ export default function Navbar() {
             <div className="links">
                 <ul>
                     <li>
-                        <Link to="/cart">
-                        Log In
+                        <Link to="/">
+                            Shop
                         </Link>
                     </li>
-                    <li>Cart</li>
+                    <li>
+                         <Link to="/cart">
+                            <i className="fas fa-shopping-cart"></i>
+                            Cart
+                            <span className="cartlogo_badge">0</span>
+                        </Link>
+                    </li>
+                    <li>
+                        <Link to="/login">
+                            Login
+                        </Link>
+                    </li>
                 </ul>
             </div>
-            <div className="burger"></div>
+            <div className="burger">
+                <div></div>
+                <div></div>
+                <div></div>
+            </div>
         </div>
     )
 }
