@@ -1,3 +1,5 @@
+@import '../../global.scss';
+
 .wrapper{
     display: flex;
     align-items: center;
@@ -7,11 +9,17 @@
     color: white;
     font-weight: 600;
     font-size: 36px;
-    position: absolute;
+    position: fixed;
     top: 0;
     justify-content: space-between;
+    z-index: 3;
     .logo{
         margin-left: 20px;
+        text-decoration: none;
+        a{
+            text-decoration: none;
+            color: white;
+        }
     }
     .searchbar{
         height: 30px;
@@ -23,23 +31,100 @@
     }
     .links{
         font-size: 20px;
-        display: flex;
         flex-direction: row;
-        justify-content: center;
-        position: absolute;
-        top: 10;
-        right: 30px;
+        margin-right: 20px;
         text-decoration: none;
+        @include mobile{
+            display: none;
+        }
         ul{
             display: flex;
             flex-direction: row;
+            margin: 0;
             li{
                 margin-left: 5px;
                 list-style: none;
+                padding: 8px;
+                border: 1px solid transparent;
+                &:hover{
+                    box-sizing: border-box;
+                    border: 1px solid white;
+                    border-radius: 3px;
+                }
+                .cartIcon{
+                    margin-right: 5px;
+                    padding: 5px;
+                    .cartlogo_badge{
+                        background: white;
+                        color: black;
+                        padding: 4px;
+                        border-radius: 15px;
+                    }
+                    
+                    i{
+                        margin-right: 5px;
+                    }
+                }
+
+                a{
+                    text-decoration: none;
+                    color: white;
+                    
+                    span{
+                        margin-left: 5px;
+                    }
+                }
             }
         }
     }
     .burger{
+        width: 32px;
+        height: 26px;
+        display: none;
+        flex-direction: column;
+        cursor: pointer;
+        align-items: center;
+        justify-content: space-between;
+        transform-origin: left;
+        margin: 20px;
+        @include mobile{
+            display: flex;
+        }
+        span{
+            width: 85%;
+            height: 3px;
+            background-color: white;
+            transform-origin: center;
+            transition: all 2s ease;
+        }
+    }
+    &.active{
+        color: white;
 
+        .burger{
+            span{
+                width: 100%;
+                &:first-child{
+                    background-color: white;
+                    -webkit-transform: translateY(11.9px) rotate(45deg);
+                    -ms-transform: translateY(11.9px) rotate(45deg);
+                    -o-transform: translateY(11.9px) rotate(45deg);
+                    transform: translateY(11.9px) rotate(45deg);
+                }
+                &:nth-child(2){
+                    background-color: white;
+                    transform: translateX(-45px) rotate(0deg);
+                    opacity: 0;
+                }
+                &:last-child{
+                    background-color: white;
+                    -webkit-transform: translateY(-11.2px) rotate(-45deg);
+                    -ms-transform: translateY(-11.2px) rotate(-45deg);
+                    -o-transform: translateY(-11.2px) rotate(-45deg);
+                    transform: translateY(-11.2px) rotate(-45deg);
+
+                }
+            }
+        }
     }
 }

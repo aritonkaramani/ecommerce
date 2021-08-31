@@ -1,0 +1,34 @@
+@import '../../global.scss';
+
+.menu{
+    height: 100vh;
+    right: -100%;
+    position: fixed;    
+    background: grey;
+    color: white;
+    z-index: 2;
+    transition: 1s all ease;
+    display: none;
+    align-items: center;
+    justify-content: center;
+    @include mobile{
+        display: flex;
+        width: 100%;
+        right: -100%;
+    }
+
+    &.active{
+        right: 0;
+    }
+    ul{
+        li{
+            display: flex;
+            list-style: none;
+            a{               
+                text-decoration: none;
+                color: white; 
+                font-size: 64px;
+            }
+        }
+    }
+}

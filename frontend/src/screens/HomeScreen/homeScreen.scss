@@ -1,0 +1,24 @@
+.home{
+    max-width: 1600px;
+    margin: 1rem auto;
+    .homeTitle{
+        font-size: 1.5rem;
+        color: #171717;
+        margin-bottom: 1rem;
+        margin-left: 20px;
+    }
+    .homeProduct{
+        display: grid;
+        grid-template-columns: repeat(4, 1fr);
+        margin-left: 7px;
+    @media (max-width: 1400px){
+        grid-template-columns: repeat(3,1fr);
+    }
+    @media (max-width: 1200px){
+        grid-template-columns: repeat(2,1fr);
+    }
+    @media (max-width: 1100px){
+        grid-template-columns: repeat(1,1fr);
+    }
+    }
+}
